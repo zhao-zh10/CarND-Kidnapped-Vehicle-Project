@@ -4,6 +4,8 @@
  *
  * Created on: Dec 13, 2016
  * Author: Tiffany Huang
+ * Modified on: June 27, 2019
+ * Modified by: zhao-zh10
  */
 
 #ifndef HELPER_FUNCTIONS_H_
@@ -88,7 +90,7 @@ inline bool read_map_data(std::string filename, Map& map) {
   // Return if we can't open the file
   if (!in_file_map) {
     return false;
-  }
+  } 
   
   // Declare single line of map file
   std::string line_map;
@@ -242,10 +244,27 @@ inline bool read_landmark_data(std::string filename,
     meas.x = local_x;
     meas.y = local_y;
 
-    // Add to list of control measurements
+    // Add to list of landmark measurements
     observations.push_back(meas);
   }
   return true;
+}
+
+// Calculate multivariate gaussian probability. This function will be helpful to weight updating step.
+inline double multiv_prob(double sig_x, double sig_y, double x_obs, double y_obs, double mu_x, double mu_y){
+  // calculate normalization term
+  double gauss_norm;
+  gauss_norm = 1.0 / (2.0 * M_PI * sig_x * sig_y);
+
+  // calculate exponent
+  double exponent;
+  exponent = (pow(x_obs - mu_x, 2) / (2 * pow(sig_x, 2))) + (pow(y_obs - mu_y, 2) / (2 * pow(sig_y, 2)));
+
+  // calculate weight using normalization terms and exponent
+  double weight;
+  weight = gauss_norm * exp(-exponent);
+
+  return weight;
 }
 
 #endif  // HELPER_FUNCTIONS_H_
