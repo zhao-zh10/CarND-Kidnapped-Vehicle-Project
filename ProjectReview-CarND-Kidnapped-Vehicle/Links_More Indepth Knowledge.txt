@@ -1,0 +1,20 @@
+More In-depth knowledge
+You might want to check out the following for more on particle filters:
+
+http://robots.stanford.edu/papers/thrun.pf-in-robotics-uai02.pdf
+https://arxiv.org/abs/1301.4019
+https://arxiv.org/pdf/1309.7807
+https://www.lancaster.ac.uk/pg/turnerl/PartileFiltering.pdf
+https://www.stats.ox.ac.uk/~doucet/doucet_johansen_tutorialPF2011.pdf
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0ahUKEwig7OnCqr_bAhVBoRQKHc4MAIAQFghoMAM&url=https%3A%2F%2Fwww.cc.gatech.edu%2F~dellaert%2F07F-Robotics%2FSchedule_files%2F11-ParticleFilters.ppt.pdf&usg=AOvVaw3y6Al-uV6Wmd3C7CQuby8h
+
+
+More In-depth knowledge
+The following links will help improve your knowledge in c++:
+
+http://www.bordoon.com/cplusplus/book_wrapper.html
+http://www.edparrish.net/common/cppdoc.html
+http://cplusplus.bordoon.com/cplusplusadvice.html
+https://en.wikibooks.org/wiki/Optimizing_C%2B%2B
+https://stackoverflow.com/questions/2030189/general-c-performance-improvement-tips
+
